@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Bike, Menu, Search, ShoppingCart, User, X } from "lucide-react";
+import { BikeIcon, Menu, Search, ShoppingCart, User, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -17,13 +18,11 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/10 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/80 border-b border-[#e8dfd5]">
       <div className="relative mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 lg:px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <Bike size={24} className="text-[#0f3b1f]" />
-          <h1 className="text-[22px] font-semibold tracking-tight text-[#0f3b1f]">
-            OmniEats
-          </h1>
+        <Link href="/" className="flex shrink-0 items-center gap-2 text-[22px] font-bold text-primary">
+          <BikeIcon size={32} />
+          <span className="text-black">Omni<span className="text-primary">EATS</span></span>
         </Link>
 
         <div className="hidden flex-1 items-center justify-center gap-8 lg:flex">
@@ -33,8 +32,8 @@ const Navbar = () => {
               href={item.href}
               className={`text-[15px] transition-colors ${
                 pathname === item.href
-                  ? "text-[#ff6b1a]"
-                  : "text-[#1f2937] hover:text-[#ff6b1a]"
+                  ? "text-primary"
+                  : "text-[#1f2937] hover:text-primary"
               }`}
             >
               {item.name}
@@ -65,13 +64,14 @@ const Navbar = () => {
           >
             <ShoppingCart size={24} />
           </button>
-          <button
-            type="button"
-            className="hidden items-center gap-2 rounded-full bg-[#0f3b1f] px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#124725] focus:outline-none focus:ring-2 focus:ring-[#0f3b1f]/25 sm:inline-flex"
+          <Button
+            variant="default"
+            size="lg"
+            className="hidden items-center gap-2 p-4 lg:flex"
           >
             <User size={18} />
             Sign In
-          </button>
+          </Button>
             <button
             onClick={() => setOpen(!open)}
             className="rounded-full p-2 transition hover:bg-orange-50 lg:hidden"
@@ -112,13 +112,13 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button
-              type="button"
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0f3b1f] px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#124725]"
+            <Button
+              variant="default"
+              className="mt-4 flex w-full items-center justify-center gap-2 "
             >
               <User size={18} />
               Sign In
-            </button>
+            </Button>
           </div>
         )}
       </div>

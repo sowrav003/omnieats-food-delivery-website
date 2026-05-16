@@ -1,52 +1,53 @@
-import { Pizza } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import { Pizza, ArrowRight } from "lucide-react";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative mt-6 overflow-hidden rounded-[40px] bg-[#f8f4ee] lg:mt-8">
-      
-      <div className="grid min-h-140 items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-14">
-        
-        {/* Left Content */}
-        <div className="relative z-10 max-w-xl">
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-1.5 text-xs font-semibold text-orange-500">
+    <section className="relative min-h-[700px] overflow-hidden bg-[#1a1a1a] pt-32 pb-20 text-white lg:pt-36 lg:pb-28">
+      <Image
+        src="/food.png"
+        alt="Hero Image"
+        fill
+        priority
+        className="z-0 object-cover object-right"
+      />
+
+      <div className="absolute inset-0 bg-linear-to-r from-[#1a1a1a] via-[#1a1a1a]/85 to-transparent" />
+
+      <div className="absolute left-0 top-1/2 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-orange-500/10 blur-[120px]" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-xl">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-4 py-2 text-xs font-semibold text-orange-400 backdrop-blur">
             <Pizza className="size-4" />
-            Delicious Food Delivered To Your Doorstep
+            Fast Food Delivered To Your Doorstep
           </span>
 
-          <h1 className="text-5xl font-bold leading-tight text-zinc-900 lg:text-7xl">
-            Fast Delivery <br />
-            & Fresh Food
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
+            Fast Delivery
+            <br />& Fresh Food
           </h1>
 
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-zinc-500">
-            Order your favorite meals from the best restaurants near you with fast delivery and fresh ingredients.
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-zinc-300">
+            Order your favorite meals from top restaurants with fast delivery
+            and premium quality.
           </p>
 
-          <div className="mt-8 flex items-center gap-4">
-            <button className="rounded-full bg-orange-500 px-7 py-4 font-medium text-white transition hover:bg-orange-600">
+          <div className="mt-8 flex flex-wrap  gap-4">
+            <Button className="h-12 rounded-2xl bg-orange-500 px-8 text-base font-bold hover:bg-orange-600">
               Order Now
-            </button>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
 
-            <button className="rounded-full border border-zinc-300 px-7 py-4 font-medium text-zinc-700 transition hover:border-orange-500 hover:text-orange-500">
+            <Button
+              variant="outline"
+              className="h-12 rounded-2xl border-zinc-700 bg-transparent px-8 text-base font-bold text-white hover:bg-zinc-900 hover:text-white"
+            >
               View Menu
-            </button>
+            </Button>
           </div>
         </div>
-
-        {/* Right Image */}
-<div className="relative">
-  <div className="absolute inset-0 bg-orange-200/40 blur-3xl" />
-
-  <Image
-    src="/hero.jpeg"
-    alt="Hero Food"
-    width={900}
-    height={900}
-    className="relative z-10 object-contain"
-  />
-</div>
       </div>
     </section>
   );
