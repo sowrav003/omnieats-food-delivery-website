@@ -18,7 +18,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/80 border-b border-[#e8dfd5]">
+    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/70 border-b border-[#cacaca]">
       <div className="relative mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 lg:px-6">
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[22px] font-bold text-primary">
           <BikeIcon size={32} />
