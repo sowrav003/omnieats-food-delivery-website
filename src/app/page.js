@@ -5,6 +5,7 @@ import Deals from "@/components/home/Deals";
 import Hero from "@/components/home/Hero";
 import Newsletter from "@/components/home/Newsletter";
 import Restaurants from "@/components/home/Restaurants";
+import Team from "@/components/home/Team";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Categories />
       <Restaurants />
       <Banner />
+      <Team />
       <Newsletter />
     </main>
   );

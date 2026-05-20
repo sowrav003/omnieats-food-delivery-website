@@ -19,6 +19,8 @@ import chicken_fil_a from './Logo-Chick-fil-A-1.png';
 import banner from './banner_couple.png';
 import appstore from './App-Store-Logo.png';
 import playstore from './Google-Play-Logo.png';
+import chef from './chef.jpeg';
+import rider from './delivery.jpeg';
 
 export const assets = {
     deals_01,
@@ -40,6 +42,8 @@ export const assets = {
     dominoes,
     chicken_fil_a,
     banner,
+    chef,
+    rider,
     appstore,
     playstore
 }
@@ -159,5 +163,23 @@ export const restaurants = [
         cuisine: 'Fast Food',
         rating: 4.4,
         image: chicken_fil_a
+    }
+]
+
+
+export const team =[
+    {
+        id: 1,
+        title: 'Partner with us',
+        description: 'Earn more with low fees.',
+        image: chef,
+        des:'business'
+    },
+    {
+        id: 2,
+        title: 'Become a Rider',
+        description: 'Available exclusive perks',
+        image: rider,
+        des: 'rider'
     }
 ]
