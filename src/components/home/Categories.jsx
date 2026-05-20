@@ -12,7 +12,7 @@ const Categories = () => {
             Categories
           </h1>
           <p className="text-sm sm:text-base text-gray-600">
-            Explore our wide range of food categories to satisfy your cravings!
+            Find your favorites fast
           </p>
         </div>
 

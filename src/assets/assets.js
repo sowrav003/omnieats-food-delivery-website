@@ -10,6 +10,15 @@ import steak from './steak.png';
 import pasta from './pasta.png';
 import soups from './soups.png';
 import french_fries from './french_fries.png';
+import burger_king from './Burger-King_Logo.png';
+import kfc from './Kfc_logo.png';
+import mcdonalds from './McDonalds-logo.png';
+import pizza_hut from './Pizza-Hut-Logo.png';
+import dominoes from './Dominos-logo.png';
+import chicken_fil_a from './Logo-Chick-fil-A-1.png';
+import banner from './banner_couple.png';
+import appstore from './App-Store-Logo.png';
+import playstore from './Google-Play-Logo.png';
 
 export const assets = {
     deals_01,
@@ -23,7 +32,16 @@ export const assets = {
     steak,
     pasta,
     soups,
-    french_fries
+    french_fries,
+    burger_king,
+    kfc,
+    mcdonalds,
+    pizza_hut,
+    dominoes,
+    chicken_fil_a,
+    banner,
+    appstore,
+    playstore
 }
 
 
@@ -96,5 +114,50 @@ export const categories = [
         id: 9,
         name: 'Fries',
         image: french_fries
+    }
+]
+
+export const restaurants = [
+    {
+        id: 1,
+        name: 'McDonald\'s',
+        cuisine: 'Fast Food',
+        rating: 4.0,
+        image: mcdonalds
+    },
+    {
+        id: 2,
+        name: 'Pizza Hut',
+        cuisine: 'Italian',
+        rating: 4.2,
+        image: pizza_hut
+    },
+    {
+        id: 3,
+        name: 'KFC',
+        cuisine: 'Fast Food',
+        rating: 4.1,
+        image: kfc
+    },
+    {
+        id: 4,
+        name: 'Domino\'s',
+        cuisine: 'Italian',
+        rating: 4.3,
+        image: dominoes
+    },
+    {
+        id: 5,
+        name: 'Burger King',
+        cuisine: 'Fast Food',
+        rating: 4.0,
+        image: burger_king
+    },
+    {
+        id: 6,
+        name: 'Chicken fil A',
+        cuisine: 'Fast Food',
+        rating: 4.4,
+        image: chicken_fil_a
     }
 ]

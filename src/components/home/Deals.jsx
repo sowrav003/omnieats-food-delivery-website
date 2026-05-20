@@ -1,4 +1,4 @@
-import { assets,deals } from '@/assets/assets'
+import { deals } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 

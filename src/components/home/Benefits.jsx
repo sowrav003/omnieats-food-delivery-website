@@ -26,11 +26,11 @@ const BENEFITS = [
 const Benefits = () => {
   return (
     <section className="bg-background py-6 sm:py-8 lg:py-10 px-3 sm:px-4 lg:px-6">
-      <div className="mx-auto w-full max-w-7xl border border-border rounded-xl sm:rounded-2xl shadow-sm sm:shadow-md px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mx-auto bg-white w-full max-w-7xl border border-border rounded-xl sm:rounded-2xl shadow-sm sm:shadow-md px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8">
         <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {BENEFITS.map(({ title, subtitle, Icon }) => (
             <li key={title} className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
-              <div className="flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-lg bg-app-cream text-app-green">
+              <div className="flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-[#ff9800]/10 text-[#ff9800]">
                 <Icon className="size-5 sm:size-6" aria-hidden="true" />
               </div>
 
